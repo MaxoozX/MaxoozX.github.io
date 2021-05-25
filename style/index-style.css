@@ -1,0 +1,394 @@
+:root {
+  --color-em: orange;
+  --color-em-2: #FED8B1;
+  --pc-font-size: max(1vw, 16px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Playfair Display', serif;
+}
+to-do {
+  color: red;
+  display: block;
+  display: none;
+}
+to-do::before, to-do::after {
+  content: "##";
+}
+
+.paragraph {
+  max-width: 75ch;
+  text-align: justify;
+}
+.paragraph a {
+  text-decoration: underline;
+  text-decoration-color: default;
+  color: inherit;
+}
+.paragraph a:hover {
+  text-decoration-color: var(--color-em);
+}
+
+#main {
+  background-color: black;
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#main-header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  margin: 0 0.5rem;
+  font-family: "Dancing Script";
+  font-size: 2rem;
+}
+.icons-container {
+  margin: 0 auto;
+}
+.icons {
+  margin: 0 1rem;
+  font-size: 1.15rem;
+  color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+}
+.icons-link {
+  color: inherit;
+  text-decoration: none;
+}
+.icons:hover {
+  color: var(--color-em);
+}
+.option1 {
+  margin: 1rem;
+}
+#main-content {
+  /*background-color: green;*/
+  width: calc(100% - 4em);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding-left: 4rem;
+}
+#big-name {
+  /*background-color: purple;*/
+  font-size: 3rem;
+  font-family: freight-display-pro;
+  display: flex;
+  flex-direction: row;
+}
+#pre-name {
+  margin: 0.2em 0;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: var(--color-em-2);
+}
+#post-name {
+  margin: 0.2em 0;
+  font-size: 1.5rem;
+}
+.firstname {
+  font-size: 3.5rrem;
+  font-weight: 900;
+  margin: 0.2rem;
+  margin-left: 0;
+}
+.lastname {
+  font-size: 3.5rrem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0.2rem;
+}
+#citation-container {
+  margin: 20px;
+}
+#citation {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family: "Itim";
+}
+#citation::before {
+  content: '"';
+  font-family: "Spirax";
+}
+#citation::after {
+  content: '"';
+  font-family: "Spirax";
+}
+#contact-me {}
+#contact-me-btn {
+  background-color: inherit;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: var(--color-em) 2px solid;
+  transition: 0s all ease;
+  transition-property: background-color, color;
+}
+#contact-me-btn:hover {
+  background-color: var(--color-em);
+  color: black;
+  transition-duration: 0.6s;
+}
+
+.chapter {
+  min-height: 45%;
+  padding: 3rem;
+  font-size: var(--pc-font-size);
+}
+#chapter-whoami {
+  background-color: #A9A9A9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#whoami-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 40ch;
+  max-width: calc(75ch + 0.6em);
+  border: black 2px solid;
+  padding: 0.5rem;
+}
+#whoami-title {
+  padding: 0.3em 0;
+}
+#whoami-map { /* Should not be displayed on phone */
+ margin: 0.5rem;
+ padding: 0.5rem;
+ display: flex;
+ flex-grow: 2;
+ flex-shrink: 1;
+ align-self: stretch;
+ max-height: 70vh;
+ max-width: 50%;
+}
+#whoami-map iframe {
+  flex: 1 1 auto;
+}
+#parcours-scolaire {
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+#parcours-scolaire-title {
+  padding: 0.3rem;
+}
+#chapter-interest {
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+#interest-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: right;
+  padding: 1rem;
+  border: black 2px solid;
+}
+#interest-title {
+  margin: 0.2em 0.5rem;
+}
+#interest-paragraph {
+}
+#interest-illustration {
+  width: 30%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: green;
+}
+#chapter-experiences {
+  background-color: #C0C0C0;
+}
+#chapter-experiences :is(h1,h2,h3,li) {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#experiences-lycee {
+  margin-left: 2rem;
+}
+#experiences-college {
+  margin-left: 2rem;
+}
+#chapter-experiences .paragraph {
+  padding-left: 2rem;
+}
+.experiences-list {
+  list-style: none;
+}
+.experience-element {
+  margin-left: 2rem;
+}
+.experience-show-button {
+  border: none;
+  background-color: inherit;
+}
+.experience-show-button:hover {
+  color: var(--color-em);
+}
+#chapter-competences {
+  background-color: #A9A9A9;
+}
+.competences-element {
+  margin: 0.5rem;
+  margin-left: 2rem;
+}
+.competences-projet-list {
+  margin: 0.5rem;
+  margin-left: 2rem;
+}
+
+#chapter-diplomes {
+  background-color: #C0C0C0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+#diplome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#diplome-text h1 {
+}
+#diplome-timeline-container {
+  background-color: grey;
+  height: 98%;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+#diplome-timeline {
+  background-color: black;
+  height: 0;
+  padding: 0.1em 0;
+  width: 98%;
+}
+#diplome-timeline-elements-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+.diplome-timeline-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.diplome-timeline-element-before {
+  display: inline-block;
+  content: "";
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: grey;
+  border: black 2px solid;
+  transform: translateY(-50%);
+  transition: 0s background-color ease;
+}
+.diplome-timeline-element-before:hover {
+  background-color: var(--color-em);
+  transition-duration: 0.6s;
+}
+#diplome-viewer-container {
+  background-color: #A9A9A9;
+  width: 80%;
+  height: 65%;
+  border: black 2px solid;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#diplome-viewer-paragraph {
+  text-align: center;
+}
+
+#chapter-contact-me {
+  background-color: #D8D8D8;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contact-choose-container {
+  border: black 2px solid;
+  width: 45%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  overflow: hidden;
+}
+#contact-choose-container:hover {
+  border: var(--color-em) 2px solid;
+}
+#contact-choose-container p {
+  margin: 0.5rem;
+  text-align: center;
+  display: inline;
+}
+#contact-title {
+  
+}
+#social-medias-accounts {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+}
+#social-medias-accounts object {
+  width: 20%;
+}
+.display-value-on-hover {
+  margin: 0.5rem;
+}
+#contact-prompt-container {
+  border: black 2px solid;
+  width: 45%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact-prompt-container:hover {
+  border: var(--color-em) 2px solid;
+}
+#contact-prompt-p {
+  font-size: 1.5rem;
+  font-family: Consolas, monaco, monospace;
+}
